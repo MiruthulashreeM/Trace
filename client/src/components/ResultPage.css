@@ -1,0 +1,432 @@
+.result-page-wrapper {
+  min-height: 100vh;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 15px;
+  box-sizing: border-box;
+}
+
+.result-container {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  padding: 35px 30px;
+  max-width: 1250px;
+  width: 95%;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+
+/* Archetype Identification Banner */
+.archetype-banner {
+  text-align: center;
+  padding: 24px 20px;
+  background: linear-gradient(135deg, rgba(238, 242, 255, 0.8), rgba(243, 232, 255, 0.8));
+  border-radius: 18px;
+  border: 1px solid #e0e7ff;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.08);
+}
+
+.archetype-badge {
+  display: inline-block;
+  background: #4f46e5;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  margin-bottom: 10px;
+}
+
+.archetype-title {
+  color: #1e1b4b;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin: 6px 0;
+  letter-spacing: -0.5px;
+}
+
+.archetype-tagline {
+  color: #4b5563;
+  font-size: 1.05rem;
+  max-width: 750px;
+  margin: 0 auto 12px auto;
+  line-height: 1.5;
+}
+
+.archetype-dominant-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 500;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.pill-divider {
+  color: #9ca3af;
+}
+
+/* Horizontal Section (Left & Right) */
+.horizontal-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 900px) {
+  .horizontal-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-card,
+.traits-ranked-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.chart-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.total-100-badge {
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  border: 1px solid #a7f3d0;
+}
+
+.chart-card h3,
+.traits-ranked-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.35rem;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.traits-ranked-subtitle {
+  color: #64748b;
+  font-size: 0.92rem;
+  margin: 0 0 20px 0;
+}
+
+.chart-section {
+  margin-top: 10px;
+}
+
+.custom-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Ranked Traits Breakdown (Right Side) */
+.ranked-traits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ranked-trait-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px 18px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.ranked-trait-item:hover {
+  transform: translateX(4px);
+  border-color: #cbd5e1;
+}
+
+.ranked-trait-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.ranked-trait-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trait-rank-num {
+  font-weight: 700;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.trait-name {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 1.05rem;
+}
+
+.ranked-trait-stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trait-level-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.level-high {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.level-med {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.level-low {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.trait-percent-value {
+  font-weight: 800;
+  color: #0f172a;
+  font-size: 1.05rem;
+}
+
+.trait-bar-track {
+  background: #e2e8f0;
+  height: 8px;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.trait-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.6s ease-in-out;
+}
+
+.trait-brief-desc {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
+/* Summary Box */
+.summary-box {
+  margin-top: 24px;
+}
+
+.below-pie {
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.ai-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 10px;
+}
+
+.ai-summary-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1e293b;
+}
+
+.ai-model-tag {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 9999px;
+}
+
+.ai-summary-text {
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  white-space: pre-line;
+}
+
+.ai-tips-section h4,
+.famous-personality-section h4 {
+  margin: 14px 0 8px 0;
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.ai-tips-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tip-card {
+  background: #f8fafc;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  color: #334155;
+  border-left: 3px solid #6366f1;
+}
+
+.famous-personality-section p {
+  background: #fdf4ff;
+  border-left: 3px solid #d946ef;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #701a75;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Action Section */
+.action-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.action-section button {
+  padding: 14px 26px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.pdf-btn {
+  background-color: #6366f1;
+  color: white;
+}
+
+.pdf-btn:hover {
+  background-color: #4f46e5;
+  transform: translateY(-2px);
+}
+
+.explore-btn {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  color: white;
+  font-size: 1.05rem !important;
+}
+
+.explore-btn:hover {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+}
+
+.retake-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.retake-btn:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* Download PDF Print Styles */
+.download-layout .action-section {
+  display: none !important;
+}
+
+/* Loading Spinner */
+.loading-spinner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  color: white;
+  text-align: center;
+}
+
+.loading-spinner {
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top: 6px solid #38bdf8;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.loading-text {
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

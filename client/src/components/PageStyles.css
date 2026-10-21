@@ -1,0 +1,298 @@
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.overlay-page, .home-page {
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.transparent-navbar {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 0; /* Removed extra top padding */
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 0 !important;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.4);
+}
+
+
+.hero-content .btn {
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.feature-row {
+  margin-top: 0 !important;
+  gap: 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.feature-card, .start-journey-btn {
+  background: rgba(60, 80, 120, 0.35);
+  backdrop-filter: blur(16px);
+  border-radius: 18px !important;
+  padding: 2rem 1.5rem;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 24px 0 rgba(30,60,114,0.12);
+  border: 1px solid rgba(255,255,255,0.12);
+  min-width: 300px;
+  max-width: 350px;
+  margin: 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.feature-card:hover, .start-journey-btn:hover {
+  transform: translateY(-8px) scale(1.03);
+  background: rgba(60, 80, 120, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(30,60,114,0.18);
+  color: #ffd200;
+}
+
+.start-journey-btn {
+  border: none;
+  outline: none;
+  margin-bottom: 0;
+  margin-top: 2.5rem;
+  min-width: 300px;
+  max-width: 350px;
+  height: 100%;
+  padding: 2rem 1.5rem;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 2px 16px 0 rgba(30,60,114,0.10);
+}
+
+.auth-box {
+  position: relative;
+  z-index: 1;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 10%;
+  background: rgba(30, 60, 114, 0.85);
+  padding: 2.5rem 2rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+}
+
+.auth-button {
+  width: 100%;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.auth-box p {
+  margin-top: 12px;
+}
+
+.auth-box a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* HomePage Modern Styles */
+
+.home-page.enhanced-home-bg {
+  min-height: 100vh;
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  color: #fff;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.enhanced-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30, 60, 114, 0.18); /* Much lighter overlay for visible image */
+  z-index: 1;
+}
+
+.navbar.transparent-navbar {
+  display: none; /* Hide the top navbar */
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 240px;
+  background: rgba(30, 60, 114, 0.85);
+  color: #fff;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 1.5rem;
+  box-shadow: 2px 0 16px 0 rgba(30,60,114,0.10);
+  transition: transform 0.3s ease;
+}
+.sidebar .sidebar-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+.sidebar .sidebar-user {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: #ffd200;
+}
+.sidebar .sidebar-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  transition: color 0.2s;
+}
+.sidebar .sidebar-link:hover {
+  color: #ffd200;
+}
+.sidebar-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 41;
+}
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(255,255,255,0.10);
+  transition: background 0.2s;
+}
+.sidebar-toggle-btn:hover {
+  background: #ffd200;
+  color: #1e3c72;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    width: 100vw;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    position: static;
+    box-shadow: none;
+  }
+  .sidebar .sidebar-title {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    margin-right: 1.5rem;
+  }
+  .sidebar .sidebar-user {
+    margin-bottom: 0;
+    margin-right: 1.5rem;
+  }
+  .sidebar-close-btn {
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+  }
+}
+
+.hero-content {
+  margin-left: 0 !important;
+}
+
+@media (max-width: 991px) {
+  .feature-row {
+    flex-direction: column !important;
+    gap: 1.5rem;
+  }
+  .feature-card, .start-journey-btn {
+    margin-bottom: 1.5rem;
+    min-width: 220px;
+    max-width: 100%;
+  }
+  .hero-content h1, .hero-content .display-3 {
+    font-size: 2.2rem;
+  }
+}

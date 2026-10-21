@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80'); /* Replace with your real bg image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+.overlay {
+  padding: 30px;
+  min-height: 100vh;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  font-size: 2.7em;
+  color: #068e98;
+  margin-bottom: 10px;
+}
+header h2 {
+  color: #068e98;
+  
+}
+header p {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.card {
+  background: rgba(30, 40, 60, 0.75); /* Transparent night card */
+  padding: 30px;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 850px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+  line-height: 1.7em;
+}
+
+.card h2 {
+  border-bottom: 1px solid #666;
+  padding-bottom: 10px;
+  color: #068e98;
+  margin-bottom: 20px;
+}
+
+.card ul {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.card ul li::before {
+  content: "✔️";
+  margin-right: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  color: #aaa;
+  font-size: 0.9em;
+}

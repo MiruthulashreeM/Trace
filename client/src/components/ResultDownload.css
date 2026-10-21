@@ -1,0 +1,77 @@
+/* ✅ File: /src/pages/ResultDownload.css */
+
+.result-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: transparent;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.result-container.horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 30px;
+  gap: 30px;
+  width: 100%;
+  max-width: 1300px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.left-chart-area {
+  flex: 1.2;
+  min-width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-info-area {
+  flex: 1;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.summary-box,
+.highlight-box {
+  background-color: #ffffff;
+  border-left: 5px solid #0984e3;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.highlight-box ul {
+  padding-left: 20px;
+}
+
+.traits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.trait-box {
+  background-color: #ffffff;
+  padding: 18px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.trait-box h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #2d3436;
+}

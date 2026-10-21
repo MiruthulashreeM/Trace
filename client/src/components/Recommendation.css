@@ -1,0 +1,229 @@
+/* Background setup */
+body {
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Main container for the page */
+.recommendations-page {
+  padding: 40px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Header Section */
+.recommendations-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 35px auto;
+}
+
+.recommendations-header h2 {
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  margin-bottom: 10px;
+}
+
+.recommendations-subtitle {
+  color: #e2e8f0;
+  font-size: 1.15rem;
+  margin-bottom: 22px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.recommendations-subtitle strong {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+/* Action Toolbar */
+.recommendations-toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.toolbar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.shuffle-btn {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  color: #ffffff;
+}
+
+.shuffle-btn:hover {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.4);
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+.retake-btn {
+  background: rgba(239, 68, 68, 0.85);
+  color: #ffffff;
+}
+
+.retake-btn:hover {
+  background: rgba(220, 38, 38, 1);
+  transform: translateY(-2px);
+}
+
+/* Grid container for recommendation cards */
+.recommendations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* Individual recommendation card */
+.recommendation-item {
+  position: relative;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-radius: 20px;
+  padding: 32px 24px 26px 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.recommendation-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Trait pill badge */
+.recommendation-badge {
+  align-self: flex-start;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 14px;
+}
+
+/* Place name */
+.recommendation-item h3 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #f8fafc;
+  line-height: 1.3;
+}
+
+/* Location subtitle */
+.recommendation-location {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0 0 14px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Description text */
+.recommendation-desc {
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Loading & Error States */
+.loading-state,
+.error-state {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 80px auto;
+  padding: 35px 25px;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  max-width: 550px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.recommendation-spinner {
+  width: 44px;
+  height: 44px;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #38bdf8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 18px auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.action-btn-retake {
+  margin-top: 18px;
+  padding: 10px 24px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.action-btn-retake:hover {
+  background: #2563eb;
+}
+
+.no-recommendations {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #e2e8f0;
+  font-size: 1.2rem;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+}
